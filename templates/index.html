@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block title %}小雨首页{% endblock %}文章内容:</h2>
+    {% for data in data %}
+        <h3>{{ data['title'] }}</h3>
+        <p>{{ data['content'] }}</p>
+        <div>创建于：{{data['created']}}</div>
+    {% endfor %}
+{% endblock %}
