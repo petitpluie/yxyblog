@@ -4,3 +4,4 @@
 *.min.js
 .thispyenv
 .vscode
+.git

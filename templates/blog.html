@@ -1,0 +1,7 @@
+<!--博客展示页，页面结构继承于base.html-->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>{% block title %}{{ blog['title'] }}{% endblock %}&nbsp;文章内容:</h2>
+    <p>{{ blog['content'] }}</p>
+{% endblock %}
