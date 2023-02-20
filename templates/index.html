@@ -2,11 +2,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>{% block title %}小雨首页{% endblock %}:</h2>
+    <h1>{% block title %}博客首页{% endblock %}:</h1>
     {% for blog_idx in blogs %}
         <a href="{{ url_for('blog', blog_id=blog_idx['id']) }}">
             <div class="blog_list_title">{{ blog_idx['title'] }}</div>
         </a>
         <div class="time">{{ blog_idx['created'] }}</div>
+        <a class="edit_btn" href="{{ url_for('edit', blog_id=blog_idx['id']) }}">编辑</a>
     {% endfor %}
 {% endblock %}
