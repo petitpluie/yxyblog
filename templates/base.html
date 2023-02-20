@@ -10,7 +10,11 @@
 </head>
 
 <body>
-    <p>YXY博客&nbsp;<a href="javascript:;">关于YXY-BLOG</a></p>
+    <div>
+        <span>YXY博客</span>&nbsp;
+        <a href="javascript:;">关于YXY-BLOG</a>&nbsp;
+        <a href="{{url_for('new')}}">编写博客</a>&nbsp;
+    </div>
     {% for message in get_flashed_messages() %}
     <div class="alertbox">{{message}}</div>
     {% endfor %}

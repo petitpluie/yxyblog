@@ -4,5 +4,5 @@
 {% block content %}
     <h2>{% block title %}{{ blog['title'] }}{% endblock %}</h2>
     <p>{{ blog['content'] }}</p>
-    <p style="font-size: 13px;">{{blog['created']}}</p>
+    <div class="time">{{blog['created']}}</div>
 {% endblock %}

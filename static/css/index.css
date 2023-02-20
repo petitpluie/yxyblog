@@ -6,3 +6,13 @@
     border:1px solid red;
     font-size: 14px;
 }
+.time {
+    display: inline-block;
+    font-size: 13px;
+    margin-bottom: 10px;
+    background-color: #39c5bb;
+}
+
+.blog_list_title {
+    font-size: 18px;
+}

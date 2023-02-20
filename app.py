@@ -21,7 +21,7 @@ def get_db_data_by_id(blog_id):
 @app.route('/')
 def index():
     conn = get_db_conn()
-    blogs = conn.execute('select * from blog').fetchall()  # 从句柄获取data
+    blogs = conn.execute('select * from blog order by created desc').fetchall()  # 从句柄获取data
     html = render_template('index.html', blogs = blogs)
     return html
 
@@ -53,4 +53,4 @@ def blog(blog_id):
 
 
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=8090)
+    app.run(debug=True, host='0.0.0.0', port=8090)
