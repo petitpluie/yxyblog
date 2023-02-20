@@ -11,6 +11,9 @@
 
 <body>
     <p>YXY博客&nbsp;<a href="javascript:;">关于YXY-BLOG</a></p>
+    {% for message in get_flashed_messages() %}
+    <div class="alertbox">{{message}}</div>
+    {% endfor %}
     <div class="content">{%block content %} {%endblock %}</div>
     <br>
     <!-- <span>{{202302072200}}</span> -->

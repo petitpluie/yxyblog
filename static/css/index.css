@@ -1,3 +1,8 @@
 .content {
     border:3px solid #39c5bb;
 }
+
+.alertbox {
+    border:1px solid red;
+    font-size: 14px;
+}
