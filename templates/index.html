@@ -2,10 +2,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>{% block title %}小雨首页{% endblock %}文章内容:</h2>
-    {% for data in data %}
-        <h3>{{ data['title'] }}</h3>
-        <p>{{ data['content'] }}</p>
-        <div>创建于：{{data['created']}}</div>
+    <h2>{% block title %}小雨首页{% endblock %}:</h2>
+    {% for blog_idx in blogs %}
+        <a href="{{ url_for('blog', blog_id=blog_idx['id']) }}">
+            <h3>{{ blog_idx['title'] }}</h3>
+        </a>
+        <p style="font-size: 13px;">{{ blog_idx['created'] }}</p>
     {% endfor %}
 {% endblock %}

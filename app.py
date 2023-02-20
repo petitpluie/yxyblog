@@ -20,8 +20,8 @@ def get_db_data_by_id(blog_id):
 @app.route('/')
 def index():
     conn = get_db_conn()
-    data = conn.execute('select * from blog').fetchall() # 从句柄获取data
-    html = render_template('index.html', data = data)
+    blogs = conn.execute('select * from blog').fetchall() # 从句柄获取data
+    html = render_template('index.html', blogs = blogs)
     return html
 
 # 创建一篇博客
@@ -31,7 +31,7 @@ def new():
 
 # 查看一篇博客
 @app.route('/blog/<int:blog_id>')
-def post(blog_id):
+def blog(blog_id):
     blog = get_db_data_by_id(blog_id)
     return render_template('blog.html', blog = blog)
 

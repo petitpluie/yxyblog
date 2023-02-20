@@ -2,6 +2,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>{% block title %}{{ blog['title'] }}{% endblock %}&nbsp;文章内容:</h2>
+    <h2>{% block title %}{{ blog['title'] }}{% endblock %}</h2>
     <p>{{ blog['content'] }}</p>
+    <p style="font-size: 13px;">{{blog['created']}}</p>
 {% endblock %}
