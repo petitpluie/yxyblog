@@ -1,3 +1,7 @@
+.topbox {
+    margin-bottom: 10px;
+}
+
 .content {
     border:3px solid #39c5bb;
 }
@@ -9,14 +13,22 @@
 .time {
     display: inline-block;
     font-size: 13px;
-    margin-bottom: 10px;
     background-color: #39c5bb;
 }
 
 .blog_list_title {
+    color:black;
     font-size: 18px;
+    text-decoration: none;
 }
 
 .edit_btn {
     background-color: yellowgreen;
+}
+.delete_form {
+    display: inline-block;
+}
+.delete_btn {
+    cursor: pointer;
+    background-color: #ed5656;
 }

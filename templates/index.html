@@ -2,12 +2,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>{% block title %}博客首页{% endblock %}:</h1>
+    <h1>{% block title %}博客列表{% endblock %}:</h1>
     {% for blog_idx in blogs %}
-        <a href="{{ url_for('blog', blog_id=blog_idx['id']) }}">
-            <div class="blog_list_title">{{ blog_idx['title'] }}</div>
+        <a class="blog_list_title" href="{{ url_for('blog', blog_id=blog_idx['id']) }}">
+            <div>{{ blog_idx['title'] }}</div>
         </a>
         <div class="time">{{ blog_idx['created'] }}</div>
         <a class="edit_btn" href="{{ url_for('edit', blog_id=blog_idx['id']) }}">编辑</a>
+        <form class="delete_form" action="{{url_for('delete',blog_id=blog_idx['id'])}}" method="POST">
+            <input class="delete_btn" type="submit" value="删除" onclick="return confirm('确定要删除吗？')"></input>
+        </form>
+        <hr>
     {% endfor %}
 {% endblock %}
