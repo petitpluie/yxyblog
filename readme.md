@@ -1,2 +1,1 @@
-学习flask框架，构建yxyblog网站，
-数据库使用sqlite。
+学习py的flask框架和sqlite数据库，搭建博客网站，实现基本的curd功能。

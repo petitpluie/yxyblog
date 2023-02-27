@@ -1,7 +1,7 @@
+.thispyenv/*
+.vscode/*
+.git/*
+zone/*
 *.zip
 *.rar
 *.tar.gz
-*.min.js
-.thispyenv
-.vscode
-.git
