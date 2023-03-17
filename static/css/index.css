@@ -23,6 +23,8 @@
 }
 
 .edit_btn {
+    font-size: 16px;
+    text-decoration: none;
     background-color: yellowgreen;
 }
 .delete_form {
@@ -30,5 +32,11 @@
 }
 .delete_btn {
     cursor: pointer;
+    border: none;
+    font-size: 15px;
     background-color: #ed5656;
+}
+
+.form-group > textarea {
+    min-height: 200px;
 }

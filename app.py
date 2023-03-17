@@ -1,5 +1,6 @@
 from flask import Flask, redirect, render_template, request, flash, url_for
 import sqlite3
+import json
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yxyblog_is_online'
@@ -90,5 +91,13 @@ def edit(blog_id):
 def about():
     return render_template('about.html')
 
+# 返回json测试
+@app.route('/user')
+def user():
+    return '{ "name":"yxy" }'
+@app.route('/menu')
+def menu():
+    return '{ "foods":["sala", "chicken", "hotdog"]}'
+
 if __name__ == '__main__':
-    app.run(debug=False, host='0.0.0.0', port=8090)
+    app.run(debug=True, host='0.0.0.0', port=8090)
